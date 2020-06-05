@@ -1,8 +1,8 @@
 // USER VARIABLES SECTION
 
-$accent: orange; // Accent Color
-$fontsize: 16px; // Body Font Size
-$textcolor: #333; // Text Color
+$accent: #e2211c; // Accent Color
+$fontsize: 1vw; // Body Font Size
+$text: #00041d; // Text Color
 $system: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
 $roboto: Roboto, sans-serif; // Roboto Font Family
 
@@ -12,8 +12,8 @@ $gutter: $grid-gutter-width;
 
 // IMPORT SECTION
 
-@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
-@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
+@import "node_modules/bootstrap/scss/bootstrap-reboot.scss"; // Bootstrap Reboot collection
+@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss"; // Bootstrap Breakpoints mixin
 // @import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/utilities/_sizing.scss'; // Optional Bootstrap Utilites
 
@@ -25,14 +25,14 @@ $gutter: $grid-gutter-width;
 		font-style: $fstyle;
 		font-weight: $fweight;
 		// font-display: swap; // Uncomment to initially display system fonts
-		src: local($fname), url($furl) format('woff2');
+		src: local($fname), url($furl) format("woff2");
 	}
 }
 
-@include font('Roboto', normal, 400, '../fonts/roboto-regular-webfont.woff2');
-@include font('Roboto', italic, 400, '../fonts/roboto-italic-webfont.woff2');
-@include font('Roboto', normal, 700, '../fonts/roboto-bold-webfont.woff2');
-@include font('Roboto', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2');
+@include font("Roboto", normal, 400, "../fonts/roboto-regular-webfont.woff2");
+@include font("Roboto", italic, 400, "../fonts/roboto-italic-webfont.woff2");
+@include font("Roboto", normal, 700, "../fonts/roboto-bold-webfont.woff2");
+@include font("Roboto", italic, 700, "../fonts/roboto-bolditalic-webfont.woff2");
 
 // GENERAL DOCUMENT STYLES
 
@@ -45,10 +45,15 @@ $gutter: $grid-gutter-width;
 	color: #fff;
 }
 
-input, textarea {
+input,
+textarea {
 	outline: none;
-	&:focus:required:invalid { border-color: red }
-	&:required:valid { border-color: green }
+	&:focus:required:invalid {
+		border-color: red;
+	}
+	&:required:valid {
+		border-color: green;
+	}
 }
 
 body {
@@ -56,7 +61,438 @@ body {
 	font-size: $fontsize;
 	min-width: 320px;
 	position: relative;
-	line-height: 1.65;
+	line-height: 1.2;
 	overflow-x: hidden;
-	color: $textcolor;
+	color: $text;
+	@media (max-width: 1025px) {
+		font-size: 16px;
+	}
+}
+
+.wrappper {
+	height: 100%;
+}
+.wrapper-in {
+	position: relative;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+.main-content {
+	overflow: hidden;
+	flex: 1;
+}
+
+.container {
+	max-width: 73.75em;
+	padding-left: 1em;
+	padding-right: 1em;
+	margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 0;
+}
+
+h2 {
+	font-size: 1.875em;
+	font-family: "Oswald";
+	color: $accent;
+	font-weight: bold;
+	line-height: 1.333;
+	text-align: center;
+}
+
+h3 {
+	font-size: 1.875em;
+	font-family: "Oswald";
+	color: $text;
+	font-weight: bold;
+	line-height: 1.333;
+	text-align: center;
+}
+
+h4 {
+	font-size: 1.5em;
+	//font-family: "FontAwesome5Free";
+	color: $text;
+	line-height: 1.2;
+}
+
+p {
+	margin-bottom: 0;
+}
+a {
+	&:hover {
+		text-decoration: none;
+		color: #fff;
+	}
+}
+
+.btn {
+	position: relative;
+	display: block;
+	background-color: $accent;
+	color: #fff;
+	text-align: center;
+	border-radius: 0.3125em;
+}
+
+.main-header {
+	background-color: #000;
+	padding: 1.125em 0;
+	p {
+		font-size: 1.875em;
+		font-family: "Oswald";
+		color: rgb(255, 255, 255);
+		line-height: 1.333;
+		text-align: center;
+		span {
+			color: $accent;
+		}
+	}
+}
+
+.get-bucked-list {
+	padding: 1.875em 0 3.125em;
+	&__headline {
+		margin-bottom: 3.125em;
+	}
+	&__description {
+		display: flex;
+		@media (max-width: 768px) {
+			flex-flow: column-reverse;
+		}
+	}
+	&__points {
+		width: 57%;
+		&-point {
+			&:not(:last-child) {
+				margin-bottom: 3.125em;
+			}
+			h4 {
+				margin-bottom: 0.875em;
+				position: relative;
+				padding-left: 1.7em;
+				&::before {
+					content: "✔";
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					background-color: #e2211c;
+					border-radius: 50%;
+					color: #fff;
+					display: flex;
+					justify-content: center;
+					flex-flow: column;
+					text-align: center;
+					width: 1.6em;
+					font-size: 0.7em;
+					height: 1.6em;
+				}
+			}
+		}
+	}
+	&__img {
+		width: 32em;
+		height: 34em;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+.bucked-video {
+	margin-bottom: 5em;
+	&__wrap {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+	}
+	&__headline {
+		margin-bottom: 1.75em;
+	}
+	.btn-wrap {
+		margin-bottom: 1.5em;
+		.btn {
+			max-width: 44.3125em;
+			padding: 1em 2em;
+			p {
+				font-size: 2.5em;
+			}
+			span {
+				font-size: 1.5em;
+			}
+		}
+	}
+	&__badges {
+		width: 35.5em;
+		height: 7em;
+		margin-bottom: 3em;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.bucked-says {
+	margin-bottom: 5em;
+	&__wrap {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+	}
+	&__headline {
+		margin-bottom: 2em;
+		h2 {
+			font-size: 2.25em;
+		}
+	}
+	&__img {
+		width: 100%;
+		height: 15.875em;
+		margin-bottom: 4em;
+		img {
+			width: 100%;
+		}
+	}
+	&__items {
+		&-say {
+			display: flex;
+			justify-content: space-between;
+			flex-flow: wrap;
+		}
+	}
+}
+
+.item-say {
+	&__wrap {
+		width: 32.2%;
+		border: 1px solid #c1c1c1;
+		padding: 1.5em 1.25em;
+		display: flex;
+		flex-flow: column;
+		justify-content: space-between;
+	}
+	&__stars {
+		position: relative;
+		text-align: center;
+		margin-bottom: 1.25em;
+		img {
+			width: 6.8125em;
+			height: 1.0625em;
+		}
+	}
+	&__text {
+		p {
+			margin-bottom: 1.25em;
+		}
+	}
+}
+
+.bucked-workout {
+	&__wrap {
+	}
+	&__headline {
+		margin-bottom: 4em;
+		p {
+			text-align: center;
+			margin-top: 2em;
+		}
+	}
+	&__img {
+		text-align: center;
+		strong {
+			font-size: 1.75em;
+			font-weight: bold;
+			color: $accent;
+		}
+		img {
+			width: 100%;
+			margin-top: 1em;
+		}
+	}
+}
+
+.bucked-items {
+	padding: 2em 0;
+	&__wrap {
+		display: flex;
+		flex-flow: wrap;
+		justify-content: center;
+	}
+	&__block {
+		width: 50%;
+		text-align: center;
+		margin-bottom: 3.75em;
+		&-img {
+			width: 35em;
+			height: 11.25em;
+			margin: 0 auto;
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		&-title {
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+			h2 {
+				text-transform: uppercase;
+			}
+		}
+		&-line {
+			width: 7.8125em;
+			height: 0.5em;
+			background-color: #000;
+			margin: 1.5em auto 0;
+		}
+	}
+	&__block {
+		&:last-child {
+			.bucked-items__block-img {
+				height: 9.3125em;
+			}
+		}
+	}
+}
+
+.bucked-table {
+	&__wrap {
+		text-align: center;
+	}
+	&__custom {
+		border-right: 0.125em solid #c2c2c2;
+		&-head {
+			display: flex;
+			justify-content: space-between;
+			border-bottom: 0.125em solid #c2c2c2;
+			height: 4.625em;
+			p {
+				width: 7.1875em;
+				height: 4.625em;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			p {
+				&:nth-child(1) {
+					width: 35em;
+				}
+				&:not(:last-child) {
+					border-right: 0.125em solid #c2c2c2;
+				}
+			}
+		}
+		&-body {
+			display: flex;
+			flex-flow: column;
+			.custom-row {
+				display: flex;
+				justify-content: space-between;
+				border-bottom: 0.125em solid #c2c2c2;
+				height: 4.625em;
+				&__title {
+					width: 35em;
+					height: 4.625em;
+					border-right: 0.125em solid #c2c2c2;
+					display: flex;
+					flex-flow: column;
+					justify-content: center;
+					align-items: center;
+					h5 {
+						font-size: 1.375em;
+						text-transform: uppercase;
+						margin-bottom: 0.2em;
+					}
+					p {
+						font-size: 0.875em;
+					}
+				}
+				&__cell {
+					height: 4.625em;
+					width: 7.1875em;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-flow: column;
+					img {
+						width: 1.75em;
+						height: 1.75em;
+					}
+					p {
+						font-size: 0.75em;
+					}
+					&:not(:last-child) {
+						border-right: 0.125em solid #c2c2c2;
+					}
+				}
+				&:nth-child(7) {
+					.custom-row__title {
+						h5 {
+							font-size: 1.125em;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.main-footer {
+	margin: 4em 0 1em;
+	h3 {
+		font-size: 2.25em;
+		margin-bottom: 1em;
+	}
+	&__body {
+		display: flex;
+		&-img {
+			width: 32em;
+			height: 26em;
+			img {
+				width: 100%;
+			}
+		}
+		&-description {
+			width: 60%;
+			h2 {
+				font-size: 2.875em;
+				span {
+					font-size: 0.625em;
+				}
+			}
+			.btn-wrap {
+				max-width: 37em;
+				margin: 1.5em auto 0.7em;
+				.btn {
+					padding: 0.5em;
+					p {
+						font-size: 36px;
+					}
+					span {
+						font-size: 24px;
+					}
+				}
+			}
+			.remember {
+				text-align: center;
+				margin-bottom: 1em;
+			}
+			.badges-img {
+				width: 35em;
+				height: 7.8125em;
+				margin: 0 auto;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
 }

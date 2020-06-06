@@ -31,7 +31,7 @@ $gutter: $grid-gutter-width;
 
 @include font("Roboto", bold, 700, "../fonts/src/Roboto-Bold.ttf");
 @include font("Roboto", normal, 400, "../fonts/src/Roboto-Regular.ttf");
-@include font("Roboto", normal, 800, "../fonts/src/Roboto-Black.ttf");
+@include font("RobotoBlack", bold, 800, "../fonts/src/Roboto-Black.ttf");
 @include font("Roboto", normal, 200, "../fonts/src/Roboto-Light.ttf");
 @include font("Oswald", normal, 400, "../fonts/src/Oswald-Regular.ttf");
 @include font("Oswald", bold, 700, "../fonts/src/Oswald-Bold.ttf");
@@ -156,6 +156,7 @@ a {
 	}
 	span {
 		font-family: "Oswald", sans-serif;
+		font-weight: 200;
 	}
 	&:hover {
 		background-color: lighten($accent, 10%);
@@ -199,6 +200,10 @@ a {
 		&-point {
 			&:not(:last-child) {
 				margin-bottom: 3.125em;
+			}
+			strong {
+				font-weight: 800;
+				font-family: "RobotoBlack", sans-serif;
 			}
 			h4 {
 				margin-bottom: 0.875em;

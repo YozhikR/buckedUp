@@ -42,27 +42,8 @@ $gutter: $grid-gutter-width;
 
 // GENERAL DOCUMENT STYLES
 
-::placeholder {
-	color: #666;
-}
-
-::selection {
-	background-color: $accent;
-	color: #fff;
-}
-
-input,
-textarea {
-	outline: none;
-	&:focus:required:invalid {
-		border-color: red;
-	}
-	&:required:valid {
-		border-color: green;
-	}
-}
-
-body {
+.wrappper {
+	height: 100%;
 	font-family: $roboto;
 	font-size: $fontsize;
 	min-width: 320px;
@@ -70,6 +51,23 @@ body {
 	line-height: 1.2;
 	overflow-x: hidden;
 	color: $text;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 0;
+	}
+	p {
+		margin-bottom: 0;
+	}
+	a {
+		&:hover {
+			text-decoration: none;
+			color: #fff;
+		}
+	}
 	@media (max-width: 1025px) {
 		font-size: 14px;
 	}
@@ -92,10 +90,6 @@ body {
 		font-size: 16px;
 	}
 }
-
-.wrappper {
-	height: 100%;
-}
 .wrapper-in {
 	position: relative;
 	display: flex;
@@ -111,58 +105,7 @@ body {
 	}
 }
 
-//.container {
-//	max-width: 73.75em;
-//	padding-left: 1em;
-//	padding-right: 1em;
-//	margin: 0 auto;
-//}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin-bottom: 0;
-}
-
-//h2 {
-//	font-size: 1.875em;
-//	font-family: "Oswald";
-//	color: $accent;
-//	font-weight: bold;
-//	line-height: 1.333;
-//	text-align: center;
-//}
-
-//h3 {
-//	font-size: 1.875em;
-//	font-family: "Oswald";
-//	color: $text;
-//	font-weight: bold;
-//	line-height: 1.333;
-//	text-align: center;
-//}
-
-//h4 {
-//	font-size: 1.5em;
-//	font-family: "Oswald";
-//	color: $text;
-//	line-height: 1.2;
-//}
-
-p {
-	margin-bottom: 0;
-}
-a {
-	&:hover {
-		text-decoration: none;
-		color: #fff;
-	}
-}
-
-.btn {
+.btn-gbu {
 	position: relative;
 	display: block;
 	background-color: $accent;
@@ -180,6 +123,8 @@ a {
 	}
 	&:hover {
 		background-color: lighten($accent, 10%);
+		text-decoration: none;
+		color: lighten(#000000, 10%);
 	}
 	&:active {
 		background-color: darken($accent, 10%);
@@ -310,9 +255,9 @@ a {
 			text-align: center;
 		}
 	}
-	.btn-wrap {
+	.btn-gbu-wrap {
 		margin-bottom: 1.5em;
-		.btn {
+		.btn-gbu {
 			max-width: 44.3125em;
 			padding: 0.7em 5em;
 			p {
@@ -362,8 +307,8 @@ a {
 		}
 	}
 	@media (max-width: 568px) {
-		.btn-wrap {
-			.btn {
+		.btn-gbu-wrap {
+			.btn-gbu {
 				padding: 0.5em 1em;
 				p {
 					font-size: 2em;
@@ -793,10 +738,10 @@ a {
 					font-weight: normal;
 				}
 			}
-			.btn-wrap {
+			.btn-gbu-wrap {
 				max-width: 37em;
 				margin: 1.5em auto 0.7em;
-				.btn {
+				.btn-gbu {
 					padding: 0.5em;
 					p {
 						font-size: 2.25em;
@@ -869,7 +814,7 @@ a {
 		.remember {
 			font-size: 1.25em;
 		}
-		.main-footer__body-description .btn-wrap .btn p {
+		.main-footer__body-description .btn-gbu-wrap .btn-gbu p {
 			font-size: 1.9em;
 		}
 		.badges-img {

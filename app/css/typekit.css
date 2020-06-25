@@ -1,3 +1,46 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * brandon-grotesque:
+ *   - http://typekit.com/eulas/0000000000000000000132df
+ *   - http://typekit.com/eulas/0000000000000000000132e0
+ *   - http://typekit.com/eulas/0000000000000000000132e3
+ *   - http://typekit.com/eulas/0000000000000000000132e4
+ * futura-pt:
+ *   - http://typekit.com/eulas/000000000000000000010091
+ *   - http://typekit.com/eulas/000000000000000000010092
+ *   - http://typekit.com/eulas/000000000000000000013365
+ *   - http://typekit.com/eulas/000000000000000000010095
+ * futura-pt-bold:
+ *   - http://typekit.com/eulas/00000000000000003b9af1e4
+ * futura-pt-condensed:
+ *   - http://typekit.com/eulas/000000000000000000012039
+ *   - http://typekit.com/eulas/00000000000000000001203d
+ * oswald:
+ *   - http://typekit.com/eulas/00000000000000003b9b1369
+ *   - http://typekit.com/eulas/00000000000000003b9b1368
+ *   - http://typekit.com/eulas/00000000000000003b9b136c
+ *   - http://typekit.com/eulas/00000000000000003b9b136a
+ *   - http://typekit.com/eulas/00000000000000003b9b136b
+ *   - http://typekit.com/eulas/00000000000000003b9b136d
+ * sui-generis:
+ *   - http://typekit.com/eulas/00000000000000003b9afe76
+ *   - http://typekit.com/eulas/00000000000000003b9afe73
+ *   - http://typekit.com/eulas/00000000000000003b9afe77
+ * timberline:
+ *   - http://typekit.com/eulas/00000000000000003b9b3bff
+ * urw-din:
+ *   - http://typekit.com/eulas/00000000000000003b9b0eea
+ *
+ * © 2009-2020 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2019-12-17 21:28:24 UTC"}*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=qzo7drz&ht=tk&f=255.1280.1282.10294.10295.10296.10297.10881.10882.10884.10885.15357.15361.15815.15817.15818.37504.37505.37506.32874.36608.43085&a=1972381&app=typekit&e=css");
+
 @font-face {
 	font-family: "sui-generis";
 	src: url("https://use.typekit.net/af/e3082f/00000000000000003b9afe76/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")
@@ -282,4 +325,29 @@
 	font-display: auto;
 	font-style: normal;
 	font-weight: 400;
+}
+
+.tk-sui-generis {
+	font-family: "sui-generis", sans-serif;
+}
+.tk-brandon-grotesque {
+	font-family: "brandon-grotesque", sans-serif;
+}
+.tk-futura-pt {
+	font-family: "futura-pt", sans-serif;
+}
+.tk-futura-pt-condensed {
+	font-family: "futura-pt-condensed", sans-serif;
+}
+.tk-oswald {
+	font-family: "oswald", sans-serif;
+}
+.tk-futura-pt-bold {
+	font-family: "futura-pt-bold", sans-serif;
+}
+.tk-urw-din {
+	font-family: "urw-din", sans-serif;
+}
+.tk-timberline {
+	font-family: "timberline", sans-serif;
 }

@@ -105,6 +105,10 @@ body {
 .main-content {
 	overflow: hidden;
 	flex: 1;
+	p {
+		font-family: "Roboto", sans-serif;
+		font-weight: 200;
+	}
 }
 
 //.container {
@@ -150,8 +154,6 @@ h6 {
 
 p {
 	margin-bottom: 0;
-	font-family: "Roboto", sans-serif;
-	font-weight: 200;
 }
 a {
 	&:hover {

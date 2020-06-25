@@ -123,30 +123,30 @@ h6 {
 	margin-bottom: 0;
 }
 
-h2 {
-	font-size: 1.875em;
-	font-family: "Oswald";
-	color: $accent;
-	font-weight: bold;
-	line-height: 1.333;
-	text-align: center;
-}
+//h2 {
+//	font-size: 1.875em;
+//	font-family: "Oswald";
+//	color: $accent;
+//	font-weight: bold;
+//	line-height: 1.333;
+//	text-align: center;
+//}
 
-h3 {
-	font-size: 1.875em;
-	font-family: "Oswald";
-	color: $text;
-	font-weight: bold;
-	line-height: 1.333;
-	text-align: center;
-}
+//h3 {
+//	font-size: 1.875em;
+//	font-family: "Oswald";
+//	color: $text;
+//	font-weight: bold;
+//	line-height: 1.333;
+//	text-align: center;
+//}
 
-h4 {
-	font-size: 1.5em;
-	font-family: "Oswald";
-	color: $text;
-	line-height: 1.2;
-}
+//h4 {
+//	font-size: 1.5em;
+//	font-family: "Oswald";
+//	color: $text;
+//	line-height: 1.2;
+//}
 
 p {
 	margin-bottom: 0;
@@ -206,6 +206,18 @@ a {
 	padding: 1.875em 0 3.125em;
 	&__headline {
 		margin-bottom: 3.125em;
+		font-size: 1.875em;
+		font-family: "Oswald";
+		color: $accent;
+		font-weight: bold;
+		line-height: 1.333;
+		text-align: center;
+		h2 {
+			color: $accent;
+		}
+		h3 {
+			color: $text;
+		}
 	}
 	&__description {
 		display: flex;
@@ -227,6 +239,10 @@ a {
 				margin-bottom: 0.875em;
 				position: relative;
 				padding-left: 1.7em;
+				font-size: 1.5em;
+				font-family: "Oswald";
+				color: $text;
+				line-height: 1.2;
 				&::before {
 					content: "✔";
 					position: absolute;
@@ -283,6 +299,14 @@ a {
 	}
 	&__headline {
 		margin-bottom: 1.75em;
+		h3 {
+			font-size: 1.875em;
+			font-family: "Oswald";
+			color: $text;
+			font-weight: bold;
+			line-height: 1.333;
+			text-align: center;
+		}
 	}
 	.btn-wrap {
 		margin-bottom: 1.5em;
@@ -358,6 +382,11 @@ a {
 		margin-bottom: 2em;
 		h2 {
 			font-size: 2.25em;
+			font-family: "Oswald";
+			color: $accent;
+			font-weight: bold;
+			line-height: 1.333;
+			text-align: center;
 		}
 	}
 	&__img {
@@ -429,14 +458,27 @@ a {
 }
 
 .bucked-workout {
-	&__wrap {
-	}
 	&__headline {
 		margin-bottom: 4em;
 		p {
 			text-align: center;
 			margin-top: 1.7em;
 			font-size: 1.25em;
+		}
+		h2 {
+			font-size: 1.875em;
+			color: $accent;
+			line-height: 1.333;
+			text-align: center;
+		}
+
+		h3 {
+			font-size: 1.875em;
+			font-family: "Oswald";
+			color: $text;
+			font-weight: bold;
+			line-height: 1.333;
+			text-align: center;
 		}
 		h2 {
 			font-family: "sui-generis", sans-serif;
@@ -721,6 +763,10 @@ a {
 		font-size: 2.25em;
 		margin-bottom: 1em;
 		font-weight: normal;
+		color: $text;
+		line-height: 1.333;
+		font-family: "Oswald";
+		text-align: center;
 	}
 	&__body {
 		display: flex;
@@ -736,6 +782,10 @@ a {
 			h2 {
 				font-size: 2.875em;
 				line-height: 1.1;
+				font-family: "Oswald";
+				color: $accent;
+				text-align: center;
+				font-weight: bold;
 				span {
 					font-size: 0.725em;
 					font-weight: normal;

@@ -116,6 +116,7 @@ $gutter: $grid-gutter-width;
 	p {
 		font-weight: normal;
 		font-family: "Oswald", sans-serif;
+		margin-bottom: 0;
 	}
 	span {
 		font-family: "Oswald", sans-serif;
@@ -194,7 +195,8 @@ $gutter: $grid-gutter-width;
 					content: "✔";
 					position: absolute;
 					left: 0;
-					bottom: 0;
+					bottom: 50%;
+					transform: translateY(50%);
 					background-color: #e2211c;
 					border-radius: 50%;
 					color: #fff;
@@ -282,10 +284,20 @@ $gutter: $grid-gutter-width;
 			height: 24.0625em;
 		}
 	}
+	@media (max-width: 1025px) {
+		.bucked-video__headline {
+			h3 {
+				br {
+					display: none;
+				}
+			}
+		}
+	}
 	@media (max-width: 768px) {
 		margin-bottom: 2em;
 		.bucked-video__headline {
 			h3 {
+				font-size: 1.5em;
 				br {
 					display: none;
 				}
@@ -305,13 +317,25 @@ $gutter: $grid-gutter-width;
 				padding: 0 1em;
 			}
 		}
+		.btn-gbu-wrap {
+			.btn-gbu {
+				padding: 0.5em 2em;
+				p {
+					font-size: 2em;
+					margin-bottom: 0;
+					white-space: nowrap;
+				}
+			}
+		}
 	}
 	@media (max-width: 568px) {
 		.btn-gbu-wrap {
 			.btn-gbu {
 				padding: 0.5em 1em;
+				max-width: 100%;
 				p {
-					font-size: 2em;
+					font-size: 1.7em;
+					white-space: normal;
 				}
 			}
 		}
@@ -545,6 +569,11 @@ $gutter: $grid-gutter-width;
 }
 
 .bucked-table {
+	&__container {
+		@media (min-width: 320px) and (max-width: 1200px) {
+			max-width: 100%;
+		}
+	}
 	&__wrap {
 		text-align: center;
 	}
@@ -815,7 +844,7 @@ $gutter: $grid-gutter-width;
 			font-size: 1.25em;
 		}
 		.main-footer__body-description .btn-gbu-wrap .btn-gbu p {
-			font-size: 1.9em;
+			font-size: 1.7em;
 		}
 		.badges-img {
 			height: 100%;
